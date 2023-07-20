@@ -11,13 +11,19 @@ const styles = StyleSheet.create({
 
 interface BackgroundProps {
   children: React.ReactNode,
-  style: StyleProp<ViewStyle>
+  header?: React.ReactNode,
+  gap?: number,
+  style?: StyleProp<ViewStyle>
 }
 
 export const Background = function (props: BackgroundProps) {
   return (
-    <View style={[styles.container, props.style]}>
-      {props.children}
+    <View style={[styles.container, { gap: props.gap }]}>
+      {props.header}
+      <View style={props.style}>
+        {props.children}
+      </View>
+
     </View>
   );
 }

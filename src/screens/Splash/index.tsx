@@ -11,8 +11,6 @@ const styles = StyleSheet.create({
 export const Splash = function () {
   return (
     <View style={styles.container}>
-
-
     </View>
   );
 }
